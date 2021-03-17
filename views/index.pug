@@ -3,3 +3,12 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+    each val in messages
+      .message-card
+        span User:
+          h3= val.user
+        span Message:
+          p #{val.text}
+        span Date: 
+          date #{val.added}

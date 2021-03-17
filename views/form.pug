@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    form(method="POST" action="/new")
+        label(for="username")
+            |   Username:
+        input(id="username" type="text" name="messageUser")
+        label(for="message")
+            |   Mini-message:
+        input(id="message" type="text" name="messageText")
+        button(type="submit") Submit
