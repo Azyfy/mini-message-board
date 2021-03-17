@@ -1,11 +1,14 @@
 extends layout
 
 block content
+    a(href="/")
+        div(class="button") Back
     form(method="POST" action="/new")
-        label(for="username")
-            |   Username:
-        input(id="username" type="text" name="messageUser")
-        label(for="message")
-            |   Mini-message:
-        input(id="message" type="text" name="messageText")
+        h2 New message
+        input(id="username" type="text" name="messageUser" placeholder="Name" minlength="3" maxlength="20" required)
+        br
+        br
+        input(id="message" type="text" name="messageText" placeholder="Message" minlength="5" maxlength="99" required)
+        br
+        br
         button(type="submit") Submit

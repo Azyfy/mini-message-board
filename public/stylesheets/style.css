@@ -1,8 +1,103 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #00B7FF;
 }
 
 a {
+  color: white;
+  text-decoration: none;
+}
+
+.message-board {
+  position: relative;
+  margin: auto;
+  min-width: 300px;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: whitesmoke;
+  overflow: hidden;
+}
+
+.message-card {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #2da5d4;
+  transform: scale(1);
+  transition: transform 1.5s;
+}
+
+.message-card:hover {
+  background-color: rgb(26, 24, 24);
   color: #00B7FF;
+  transform: scale(1.1);
+}
+
+h3 {
+  border-bottom: 1px solid goldenrod;
+}
+
+.message-card p {
+  font-size: large;
+}
+
+.date {
+  font-size: smaller;
+}
+
+.button {
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+.button:hover {
+  transform: scale(0.9);
+}
+
+.bottom {
+  position: absolute;
+  right: 25px;
+  top: 100px;
+  color: lightslategrey;
+}
+
+.bottom:hover {
+  color: black;
+}
+
+/* Form */
+
+form {
+  text-align: center;
+}
+
+input {
+  transform: scale(1);
+  transition: transform 2s;
+}
+
+input:focus {
+  transform: scale(1.1);
+}
+
+form button {
+  width: 35%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  color: white;
+  transition: width 2s;
+}
+
+form button:hover {
+  width: 40%;
 }

@@ -1,14 +1,20 @@
 extends layout
 
 block content
+  
   h1= title
   p Welcome to #{title}
 
-    each val in messages
+  a(href="/#bottom") 
+    span(class="bottom")  Go to bottom
+
+  each val in messages
       .message-card
-        span User:
-          h3= val.user
-        span Message:
-          p #{val.text}
-        span Date: 
-          date #{val.added}
+        h3= val.user
+        p #{val.text}
+        span(class="date") Added: 
+          date(class="date") #{val.added}
+
+  br
+  a(href="/new") 
+    div(class="button" id="bottom")  Write a message
